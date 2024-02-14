@@ -1,7 +1,7 @@
 # Student Management Database
 ## Time start: Feb 15th, 2024
 
-## Members: 
+## Members of Team 3: 
 	1. Le Nhut Anh (Leader)
 	2. Huynh Hoang Ty
 	3. Dang Cong Khanh
