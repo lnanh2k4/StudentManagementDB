@@ -2,7 +2,7 @@
 ## Time start: Feb 15<sup>th</sup>, 2024
 
 ## Members of Team 3: 
-	1. Le Nhut Anh (Leader)
+	1. Le Nhut Anh (Leader) - CE181767
 	2. Huynh Hoang Ty
 	3. Dang Cong Khanh - CE180117
 	4. Le Ngoc Phong Nha - CE181986
