@@ -4,7 +4,6 @@ git commit -m "updated content"
 git push
 
 download:
-git checkout
 git fetch
 git pull
 
