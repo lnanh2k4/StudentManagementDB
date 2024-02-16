@@ -83,7 +83,7 @@ INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
 GO
 
 CREATE TABLE Curriculum(
-CuID CHAR(10),
+CuID NVARCHAR(11),
 CuName NVARCHAR(100),
 CuDes TEXT,
 CONSTRAINT PK_Curriculum PRIMARY KEY (CuID)
@@ -97,7 +97,7 @@ GO
 CREATE TABLE CurriculumDetail(
 CDID INT IDENTITY,
 SuID CHAR(6),
-CuID CHAR(10),
+CuID NVARCHAR(11),
 CDSemester int,
 CONSTRAINT PK_CurriculumDetail PRIMARY KEY (CDID),
 CONSTRAINT FK_CurriculumDetail_Subject FOREIGN KEY (SuID) REFERENCES Subject(SuID),
@@ -118,19 +118,24 @@ StEmail NVARCHAR(30),
 CaID NVARCHAR(8),
 SpID NVARCHAR(3),
 StSemester INT NOT NULL,
+CuID NVARCHAR(11),
 CONSTRAINT PK_Student PRIMARY KEY (StID),
 CONSTRAINT FK_StudentSex FOREIGN KEY (StSex) REFERENCES Sex(SeID),
 CONSTRAINT FK_StudentCampus FOREIGN KEY (CaID) REFERENCES Campus(CaID),
-CONSTRAINT FK_StudentSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID)
+CONSTRAINT FK_StudentSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID),
+CONSTRAINT FK_StudentCurriculum FOREIGN KEY (CuID) REFERENCES Curriculum(CuID)
 )
 GO
 
-INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, SpID, StSemester) VALUES ('','','','','','','',''),
-																						   ('','','','','','','','')
+INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, SpID, StSemester, CaID) VALUES ('','','','','','','','',''),
+																								 ('','','','','','','','','')
 GO
 
---USE master
---GO
+DROP TABLE Student
+GO
 
---DROP DATABASE StudentManagement
---GO
+USE master
+GO
+
+DROP DATABASE StudentManagement
+GO
