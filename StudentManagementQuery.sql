@@ -5,8 +5,8 @@ USE StudentManagement
 GO
 
 CREATE TABLE Sex(
-SeID char(2),
-SeName varchar(10),
+SeID CHAR(2),
+SeName VARCHAR(10),
 CONSTRAINT PK_Se PRIMARY KEY (SeID)
 )
 GO
@@ -52,8 +52,8 @@ StSemester INT NOT NULL,
 )
 GO
 
-USE master
-GO
+--USE master
+--GO
 
-DROP DATABASE StudentManagement
-GO
+--DROP DATABASE StudentManagement
+--GO
