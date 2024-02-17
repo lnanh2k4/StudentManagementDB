@@ -5,7 +5,7 @@
 	1. Le Nhut Anh (Leader) - CE181767
 	2. Huynh Hoang Ty - CE180191
 	3. Dang Cong Khanh - CE180117
-	4. Le Ngoc Phong Nha - CE181986
+	4. Le Ngoc Phong Nha - CE181986.
 	5. Nguyen Le Khac Vu - CE180175
 	
 	
