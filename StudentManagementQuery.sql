@@ -4,16 +4,6 @@ GO
 USE StudentManagement
 GO
 
-CREATE TABLE Sex(
-SeID CHAR(2),
-SeName VARCHAR(10),
-CONSTRAINT PK_Sex PRIMARY KEY (SeID)
-)
-GO
-
-INSERT INTO Sex(SeID, SeName) VALUES ('ML','Male'),
-									 ('FM','Female')
-GO
 
 CREATE TABLE Campus(
 CaID NVARCHAR(8),
@@ -56,32 +46,6 @@ INSERT INTO Major(MaID,MaName) VALUES ('IT', 'Information Technology'),
 									  ('BA', 'Business Adminstration')
 GO
 
-CREATE TABLE Specialization(
-SpID NVARCHAR(3),
-SpName NVARCHAR(30),
-MaID NVARCHAR(3),
-CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
-CONSTRAINT FK_Specialization FOREIGN KEY (MaID) REFERENCES Major(MaID)
-)
-GO
-
-INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
-													('HM', 'Hotel management','BA'),
-													('IB', 'International Business','BA'),
-													('MC', 'Multimedia Communication','BA'),
-													('MKT', 'Digital Marketing','BA'),
-													('TM', 'Tourism and Travel Management','BA'),
-													('EN', 'English Studies','ES'),
-													('AI', 'Artificial Intelligence','IT'),
-													('GD', 'Digital Art & Design','IT'),
-													('IA', 'Information Assurance','IT'),
-													('IoT','Internet of Things','IT'),
-													('IS', 'Information System','IT'),
-													('SE', 'Software Engineering','IT'),
-													('JP', 'Japanese Studies','JP'),
-													('KR', 'Korean Studies','KR')
-GO
-
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11),
 CuName NVARCHAR(100),
@@ -94,6 +58,35 @@ INSERT INTO Curriculum(CuID,CuName,CuDes) VALUES ('','',''),
 												 ('','','')
 GO
 
+CREATE TABLE Specialization(
+SpID NVARCHAR(3),
+SpName NVARCHAR(30),
+MaID NVARCHAR(3),
+CuID NVARCHAR(11),
+CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
+CONSTRAINT FK_Specialization FOREIGN KEY (MaID) REFERENCES Major(MaID),
+CONSTRAINT FK_Specialization_Curriculum FOREIGN KEY (CuID) REFERENCES Curriculum(CuID)
+)
+GO
+
+INSERT INTO Specialization(SpID,SpName,MaID,CuID) VALUES ('FIN', 'Finance','BA',''),
+													('HM', 'Hotel management','BA',''),
+													('IB', 'International Business','BA',''),
+													('MC', 'Multimedia Communication','BA',''),
+													('MKT', 'Digital Marketing','BA',''),
+													('TM', 'Tourism and Travel Management','BA',''),
+													('EN', 'English Studies','ES',''),
+													('AI', 'Artificial Intelligence','IT',''),
+													('GD', 'Digital Art & Design','IT',''),
+													('IA', 'Information Assurance','IT',''),
+													('IoT','Internet of Things','IT',''),
+													('IS', 'Information System','IT',''),
+													('SE', 'Software Engineering','IT',''),
+													('JP', 'Japanese Studies','JP',''),
+													('KR', 'Korean Studies','KR','')
+GO
+
+
 CREATE TABLE CurriculumDetail(
 CDID INT IDENTITY,
 SuID CHAR(6),
@@ -105,30 +98,27 @@ CONSTRAINT FK_CurriculumDetail_Curriculum FOREIGN KEY (CuID) REFERENCES Curricul
 )
 GO
 
-INSERT INTO CurriculumDetail(SuID,CuID,CDID) VALUES ('','',''),
-													('','','')
+INSERT INTO CurriculumDetail(SuID,CuID,CDID,CDSemester) VALUES ('','','',''),
+																('','','','')
 GO
 
 CREATE TABLE Student(
 StID CHAR(8), 
 StFName NVARCHAR(30),
 StLName NVARCHAR(30),
-StSex CHAR(2),
+StSex int,
 StEmail NVARCHAR(30),
 CaID NVARCHAR(8),
-SpID NVARCHAR(3),
 StSemester INT NOT NULL,
 CuID NVARCHAR(11),
 CONSTRAINT PK_Student PRIMARY KEY (StID),
-CONSTRAINT FK_StudentSex FOREIGN KEY (StSex) REFERENCES Sex(SeID),
 CONSTRAINT FK_StudentCampus FOREIGN KEY (CaID) REFERENCES Campus(CaID),
-CONSTRAINT FK_StudentSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID),
 CONSTRAINT FK_StudentCurriculum FOREIGN KEY (CuID) REFERENCES Curriculum(CuID)
 )
 GO
 
-INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, SpID, StSemester, CaID) VALUES ('','','','','','','','',''),
-																								 ('','','','','','','','','')
+INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, CaID) VALUES ('','','','','','','',''),
+																						   ('','','','','','','','')
 GO
 
 DROP TABLE Student
