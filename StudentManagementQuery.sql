@@ -98,8 +98,8 @@ CONSTRAINT FK_CurriculumDetail_Curriculum FOREIGN KEY (CuID) REFERENCES Curricul
 )
 GO
 
-INSERT INTO CurriculumDetail(SuID,CuID,CDID,CDSemester) VALUES ('','','',''),
-																('','','','')
+INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('','',''),
+																('','','')
 GO
 
 CREATE TABLE Student(
