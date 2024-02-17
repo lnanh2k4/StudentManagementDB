@@ -46,12 +46,22 @@ INSERT INTO Major(MaID,MaName) VALUES ('IT', 'Information Technology'),
 									  ('BA', 'Business Adminstration')
 GO
 
+
+CREATE TABLE Specialization(
+SpID NVARCHAR(3),
+SpName NVARCHAR(30),
+MaID NVARCHAR(3),
+CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
+CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID),
+)
+GO
+
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11),
 CuName NVARCHAR(100),
 CuDes TEXT,
 SpID NVARCHAR(3),
-CONSTRAINT PK_Curriculum PRIMARY KEY (CuID)
+CONSTRAINT PK_Curriculum PRIMARY KEY (CuID),
 CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID),
 )
 GO
@@ -60,22 +70,13 @@ INSERT INTO Curriculum(CuID,CuName,CuDes,SpID) VALUES ('','','',''),
 													 ('','','','')
 GO
 
-CREATE TABLE Specialization(
-SpID NVARCHAR(3),
-SpName NVARCHAR(30),
-MaID NVARCHAR(3),
-CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
-CONSTRAINT FK_Specialization FOREIGN KEY (MaID) REFERENCES Major(MaID),
-)
-GO
-
 INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
 													('HM', 'Hotel management','BA'),
 													('IB', 'International Business','BA'),
 													('MC', 'Multimedia Communication','BA'),
 													('MKT', 'Digital Marketing','BA'),
 													('TM', 'Tourism and Travel Management','BA'),
-													('EN', 'English Studies','ES',''),
+													('EN', 'English Studies','ES'),
 													('AI', 'Artificial Intelligence','IT'),
 													('GD', 'Digital Art & Design','IT'),
 													('IA', 'Information Assurance','IT'),
@@ -121,11 +122,11 @@ INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, Ca
 																						   ('','','','','','','','')
 GO
 
-DROP TABLE Student
-GO
+--DROP TABLE Student
+--GO
 
-USE master
-GO
+--USE master
+--GO
 
-DROP DATABASE StudentManagement
-GO
+--DROP DATABASE StudentManagement
+--GO
