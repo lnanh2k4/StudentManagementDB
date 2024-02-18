@@ -26,13 +26,13 @@ CREATE TABLE Subject(
 SuID CHAR(6),
 SuName NVARCHAR(30),
 SuNoCredit INT,
-SuDes TEXT,
+SuPrerequisite TEXT,
 CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 )
 GO
 
-INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES ('','','',''),
-														 ('','','','')
+INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES ('','','',''),
+																 ('','','','')
 GO
 
 CREATE TABLE Major(
@@ -58,6 +58,24 @@ CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
 CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID),
 )
 GO
+
+INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
+													('HM', 'Hotel management','BA'),
+													('IB', 'International Business','BA'),
+													('MC', 'Multimedia Communication','BA'),
+													('MKT', 'Digital Marketing','BA'),
+													('TM', 'Tourism and Travel Management','BA'),
+													('EN', 'English Studies','ES'),
+													('AI', 'Artificial Intelligence','IT'),
+													('GD', 'Digital Art & Design','IT'),
+													('IA', 'Information Assurance','IT'),
+													('IoT','Internet of Things','IT'),
+													('IS', 'Information System','IT'),
+													('SE', 'Software Engineering','IT'),
+													('JP', 'Japanese Studies','JP'),
+													('KR', 'Korean Studies','KR')
+GO
+
 -- Create a curriculum table
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11), -- Declare the ID of the training program as a String that can be written in Vietnamese
@@ -145,24 +163,6 @@ INSERT INTO Curriculum(CuID,CuName,SpID) VALUES
 ('BJP_JP_18D','Bachelor Program of Japanese Studies, Japanese Studies for level 1 of the Preparatory English period','JP')
 
 GO
-
-INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
-													('HM', 'Hotel management','BA'),
-													('IB', 'International Business','BA'),
-													('MC', 'Multimedia Communication','BA'),
-													('MKT', 'Digital Marketing','BA'),
-													('TM', 'Tourism and Travel Management','BA'),
-													('EN', 'English Studies','ES'),
-													('AI', 'Artificial Intelligence','IT'),
-													('GD', 'Digital Art & Design','IT'),
-													('IA', 'Information Assurance','IT'),
-													('IoT','Internet of Things','IT'),
-													('IS', 'Information System','IT'),
-													('SE', 'Software Engineering','IT'),
-													('JP', 'Japanese Studies','JP'),
-													('KR', 'Korean Studies','KR')
-GO
-
 
 CREATE TABLE CurriculumDetail(
 CDID INT IDENTITY,
