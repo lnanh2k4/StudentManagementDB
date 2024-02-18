@@ -62,14 +62,13 @@ GO
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11),
 CuName NVARCHAR(100),
-CuDes TEXT,
 SpID NVARCHAR(3),
 CONSTRAINT PK_Curriculum PRIMARY KEY (CuID),
 CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID),
 )
 GO
 
-INSERT INTO Curriculum(CuID,CuName,CuDes,SpID) VALUES ('BIT','Bachelor Program of Information Technology','Training Objectives
+INSERT INTO Curriculum(CuID,CuName,SpID) VALUES ('BIT_SE_18B','Bachelor Program of Information Technology, Software Engineering for level 4 to level 6 of preparation english','Training Objectives
 General objective: Training Bachelor of Information Technology, Digital Art & Design specialty with personality and capacity to meet the needs of society, mastering professional knowledge and practice, being able to organize, implement and promote the creativity in jobs related to the trained specialty, being able to work in the international environment, and laying the foundation to pursue further study and research in Digital Art & Design.',''),
 
 ('BEN','Bachelor of English Studies','General objective:
