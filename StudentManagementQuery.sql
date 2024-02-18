@@ -118,7 +118,7 @@ CONSTRAINT FK_StudentCurriculum FOREIGN KEY (CuID) REFERENCES Curriculum(CuID)
 )
 GO
 
-INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, CaID) VALUES ('','','','','','','',''),
+INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, CuID) VALUES ('CE180001','A','Nguyen Van','1','ANVCE000001@fpt.edu.vn','','6',''),
 																						   ('','','','','','','','')
 GO
 
