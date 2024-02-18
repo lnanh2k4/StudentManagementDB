@@ -4,17 +4,17 @@ GO
 USE StudentManagement
 GO
 
-
+-- Create Campus table
 CREATE TABLE Campus(
-CaID NVARCHAR(8),
-CaName NVARCHAR(30),
-CaAddress NVARCHAR(100),
-CaEmail NVARCHAR(30),
-CaHotline NVARCHAR(30),
-CONSTRAINT PK_Campus PRIMARY KEY (CaID)
+CaID NVARCHAR(8), -- The Campus ID is declared as a String type that can be written in Vietnamese
+CaName NVARCHAR(30), -- The Campus Name is declared as a String type that can be written in Vietnamese
+CaAddress NVARCHAR(100), -- The Campus Address is declared as a String type that can be written in Vietnamese
+CaEmail NVARCHAR(30), -- The Email of Campus is declared as a String type that can be written in Vietnamese
+CaHotline NVARCHAR(30), -- The Hotline of Campus is declared as a String type that can be written in Vietnamese
+CONSTRAINT PK_Campus PRIMARY KEY (CaID) -- Add primary key condition PK_Campus by CaID
 )
 GO
-
+-- Add data for campus version
 INSERT INTO Campus(CaID,CaName,CaAddress,CaEmail,CaHotline) VALUES ('FUHN','Ha Noi','Hoa Lac Hi-Tech Park, Km29 Thang Long Avenue, Thach That District, Hanoi','tuyensinhfpt@gmail.com','024 7300 6800'),
 																   ('FUQN','Quy Nhon','An Phu Thinh new urban area (in Dong Da ward and Nhon Binh ward)','Qnuni@fe.edu.vn','0256 7300 999'),
 																   ('FUDN','Đa Nang','FPT Da Nang urban area, Hoa Hai Ward, Ngu Hanh Son District, Da Nang City','dnuni@fe.edu.vn','0236 730 0999'),
@@ -58,16 +58,16 @@ CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
 CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID),
 )
 GO
-
+-- Create a curriculum table
 CREATE TABLE Curriculum(
-CuID NVARCHAR(11),
-CuName NVARCHAR(100),
-SpID NVARCHAR(3),
-CONSTRAINT PK_Curriculum PRIMARY KEY (CuID),
-CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID),
+CuID NVARCHAR(11), -- Declare the ID of the training program as a String that can be written in Vietnamese
+CuName NVARCHAR(100), -- Declare the Name of the training program as a String that can be written in Vietnamese
+SpID NVARCHAR(3), -- Declare the ID of the major as a String that can be written in Vietnamese
+CONSTRAINT PK_Curriculum PRIMARY KEY (CuID), -- Add primary key condition PK_Curriculum by CuID
+CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID), -- Add primary key condition FK_CurriculumSpecialization by SpID
 )
 GO
-
+-- Add data for the curriculum table
 INSERT INTO Curriculum(CuID,CuName,SpID) VALUES 
 ('BIT_SE_18A','Bachelor Program of Information Technology, Software Engineering major for exemption from preparatory English lessons','SE'),
 ('BIT_SE_18B','Bachelor Program of Information Technology, Software Engineering major for level 4-6 of the Preparatory English period','SE'),
