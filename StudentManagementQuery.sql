@@ -421,9 +421,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('DPL303m','BIT_SE_18C','8'),
 															('AIL304m','BIT_SE_18C','7'),
 															('AIP392','BIT_SE_18C','8'),
-															('DBM301','BIT_SE_18C','7'),
-
-
+															('DBM301','BIT_SE_18C','7')
 
 GO
 
