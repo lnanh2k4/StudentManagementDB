@@ -79,7 +79,35 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('IS_GRA_ELE', ' Graduation Elective - Information System', ' 10', ' '),
 ('MLN131', ' Scientific socialism', ' 2', ' MLN111, MLN122'),
 ('VNR202', ' History of CPV', ' 2', ' MLN111, MLN122'),
-('NWC204', 'Computer Networking ', '3 ', ' ')
+('NWC204', 'Computer Networking ', '3 ', ' '),
+('PRM392','Mobile Programming','3','PRO192'),
+('SWP391', 'Software development project', '3', 'PRJ301, SWE201c'),
+('SWR302', 'Software Requirement', '3', 'SWE102 or SWE201c'),
+('SWT301', 'Software Testing', '3', 'SWE102 or SWE201c'),
+('WDU203c', 'UI/UX Design', '3', ''),
+('SWD392', 'Software Architecture and Design', '3', 'SWE201c, PRO192'),
+('IOT102', 'Internet of Thing', '3', 'Familiarity with C programming'),
+('PRN211', 'Basis Cross-Platform Application Programming With .NET', '3', 'PRO192 & DBI202'),
+('PRN221', 'Advanced Cross-Platform Application Programming With .NET', '3', 'PRN211 (Basic Cross-Platform Application Programming With .NET)'),
+('PRN231', 'Building Cross-Platform Back-End Application With .NET', '3', 'PRN221 ( BUILDING CROSS-PLATFORM WEB APPLICATION WITH .NET )'),
+('JPD133', 'Elementary Japanese 1-A1/A2', '3', 'JPD123'),
+('JPD316', 'Intermediate Japanese 1-B1/B2', '6', 'Passed JPD226 For JS: Passed OJT202'),
+('JIT401', 'Information Technology Japanese', '3', 'Passed JJB391 JS: JPD316'),
+('JFE301', 'Japanese fundamental information technologyskill standards', '3', ''),
+('JPD326', 'Intermediate Japanese 2-B2.1', '3', 'Passed JPD223 or JPD226 JS: JPD322 or JPD316'),
+('PRP201c', 'Python programming', '3', 'Recommend to have knowledge of basic programming in advance'),
+('KOR311', 'Intermediate Korean Language 1', '6', 'KOR201'),
+('KOR321', 'Intermediate Korean Language 2', '3', 'KOR311'),
+('KOR411', 'Intermediate Korean Language 3', '6', 'KOR321'),
+('MMA301', 'Multiplatform Mobile App Development', '3', 'FER201m; SDN301m'),
+('WDP301', 'Web Development Project', '3', 'FER201m, SDN301m'),
+('SAP311', 'SAP General 1', '3', ''),
+('SAP321', 'SAP General 2', '3', 'SAP311'),
+('DPL303m', 'Deep Learning', '3', 'AIL304m'),
+('AIL304m', 'Machine Learning', '3', 'MAS291, MAE101'),
+('DBM301', 'Data Mining', '3', '')
+
+
 GO
 
 CREATE TABLE Major(
