@@ -108,9 +108,8 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('DBM301', 'Data Mining', '3', ''),
 ('PMG202c','Project Management','3',''),
 ('NWC203c', 'Computer Networking',  '3', ''),
-('WED201c', 'Web Design', '3', '')
-
-
+('WED201c', 'Web Design', '3', ''),
+('PRJ301','Java Web Application Development',3,'DBI202, PRO192')
 GO
 
 CREATE TABLE Major(
@@ -133,7 +132,7 @@ SpID NVARCHAR(3),
 SpName NVARCHAR(30),
 MaID NVARCHAR(3),
 CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
-CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID),
+CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID)
 )
 GO
 
@@ -160,7 +159,7 @@ CuID NVARCHAR(11), -- Declare the ID of the training program as a String that ca
 CuName NVARCHAR(255), -- Declare the Name of the training program as a String that can be written in Vietnamese
 SpID NVARCHAR(3), -- Declare the ID of the major as a String that can be written in Vietnamese
 CONSTRAINT PK_Curriculum PRIMARY KEY (CuID), -- Add primary key condition PK_Curriculum by CuID
-CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID), -- Add foreign key condition FK_CurriculumSpecialization by SpID
+CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID) -- Add foreign key condition FK_CurriculumSpecialization by SpID
 )
 GO
 -- Add data for the curriculum table
@@ -239,7 +238,6 @@ INSERT INTO Curriculum(CuID,CuName,SpID) VALUES
 ('BJP_JP_18B','Bachelor Program of Japanese Studies, Japanese Studies for level 4-6 of the Preparatory English period','JP'),
 ('BJP_JP_18C','Bachelor Program of Japanese Studies, Japanese Studies for level 2-3 of the Preparatory English period','JP'),
 ('BJP_JP_18D','Bachelor Program of Japanese Studies, Japanese Studies for level 1 of the Preparatory English period','JP')
-
 GO
 
 CREATE TABLE CurriculumDetail(
@@ -310,10 +308,8 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('SAP311','BIT_SE_18B','7'),
 															('SAP321','BIT_SE_18B','7'),															
 															('DPL303m','BIT_SE_18B','8'),
-															('AIL304m','BIT_SE_18B','7'),
-															
+															('AIL304m','BIT_SE_18B','7'),															
 															('DBM301','BIT_SE_18B','7'),
-
 															('OTP101','BIT_SE_18A','0'),
 														    ('PEN','BIT_SE_18A','0'),               
                                                             ('PHE_COM*1','BIT_SE_18A','0'),          
@@ -373,7 +369,6 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('DPL303m','BIT_SE_18A','8'),
 															('AIL304m','BIT_SE_18A','7'),
 															('DBM301','BIT_SE_18A','7'),
-
 															('OTP101','BIT_SE_18C','0'),
 														    ('PEN','BIT_SE_18C','0'),               
                                                             ('PHE_COM*1','BIT_SE_18C','0'),          
@@ -432,7 +427,6 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('DPL303m','BIT_SE_18C','8'),
 															('AIL304m','BIT_SE_18C','7'),
 														     ('DBM301','BIT_SE_18C','7')
-
 GO
 
 CREATE TABLE Student(
@@ -553,14 +547,11 @@ INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, Cu
 																							('SE180101', 'W', 'Le Thi', '0', 'WLSE180101@fpt.edu.vn', 'FUHCM', '1', 'BIT_IA_18C'),
 																							('QA180102', 'X', 'Le Thi', '0', 'XLTQA180102@fpt.edu.vn', 'FUQN', '9', 'BBA_MKT_18C'),
 																							('SE180103', 'Y', 'Le Thi', '0', 'YLTSE180103@fpt.edu.vn', 'FUHCM', '2', 'BIT_SE_18A'),
-																							('DA180104', 'Z', 'Le Thi', '0', 'ZLTDA180104@fpt.edu.vn', 'FUDN', '3', 'BBA_FIN_18B');
-
-
-
-
-																							
-
+																							('DA180104', 'Z', 'Le Thi', '0', 'ZLTDA180104@fpt.edu.vn', 'FUDN', '3', 'BBA_FIN_18B')
 GO
+
+--SELECT QUERIES
+--SELECT * FROM Student
 
 --DROP TABLE Student
 --GO
@@ -568,5 +559,5 @@ GO
 --USE master
 --GO
 
---DROP DATABASE StudentManagement
+--DROP DATABASE StudentManagementDB
 --GO
