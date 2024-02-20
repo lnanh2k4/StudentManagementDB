@@ -1,14 +1,14 @@
-﻿CREATE DATABASE StudentManagement
+﻿CREATE DATABASE StudentManagementDB
 GO
 
-USE StudentManagement
+USE StudentManagementDB
 GO
 
 -- Create Campus table
 CREATE TABLE Campus(
 CaID NVARCHAR(8), -- The Campus ID is declared as a String type that can be written in Vietnamese
 CaName NVARCHAR(30), -- The Campus Name is declared as a String type that can be written in Vietnamese
-CaAddress NVARCHAR(100), -- The Campus Address is declared as a String type that can be written in Vietnamese
+CaAddress NVARCHAR(255), -- The Campus Address is declared as a String type that can be written in Vietnamese
 CaEmail NVARCHAR(30), -- The Email of Campus is declared as a String type that can be written in Vietnamese
 CaHotline NVARCHAR(30), -- The Hotline of Campus is declared as a String type that can be written in Vietnamese
 CONSTRAINT PK_Campus PRIMARY KEY (CaID) -- Add primary key condition PK_Campus by CaID
@@ -23,8 +23,8 @@ INSERT INTO Campus(CaID,CaName,CaAddress,CaEmail,CaHotline) VALUES ('FUHN','Ha N
 GO
 
 CREATE TABLE Subject(
-SuID CHAR(6),
-SuName NVARCHAR(30),
+SuID NVARCHAR(20),
+SuName NVARCHAR(255),
 SuNoCredit INT,
 SuPrerequisite TEXT,
 CONSTRAINT PK_Subject PRIMARY KEY (SuID)
@@ -43,7 +43,6 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('PRF192', ' Programming Fundamentals', ' 3', ' '),
 ('SSL101c', ' Academic Skills for University Success', ' 3', ' '),
 ('MAD101', ' Discrete mathematics', ' 3', ' '),
-('NWC204', ' Computer Networking', ' 3', ' '),
 ('OSG202', ' Operating Systems', ' 3', ' '),
 ('PHE_COM*3', ' Physical Education 3', ' 2', ' '),
 ('PRO192', ' Object-Oriented Programming', ' 3', ' Pass PRF192'),
@@ -80,25 +79,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('IS_GRA_ELE', ' Graduation Elective - Information System', ' 10', ' '),
 ('MLN131', ' Scientific socialism', ' 2', ' MLN111, MLN122'),
 ('VNR202', ' History of CPV', ' 2', ' MLN111, MLN122'),
-('NWC204', 'Computer Networking ', '3 ', ' '),
-('ITA203c', 'Management Information Systems',  '3', ''),
-('PRJ302', 'Java Web Application Development', '3', 'DBI202, PRO192'),
-('PRC391c', 'Cloud Computing',  '3', 'PRO192'),
-('DTA301', 'Data Analysis',  '3', 'PRO192, CSD201, DBI202, MAS291'),
-('ISM302', 'Enterprise Resource Planning (ERP)', '3', ''),
-('ISP392', 'Information System Programming Project', '3', 'PRJ302, SWE201c'),
-('ITA301', 'Information System Design & Analysis',  '3', 'ITA203c, DBI202'),
-('ITE302c', 'Ethics in IT',  '3', 'None'),
-('IS_COM*1', 'Subject 1 of Combo*', '3', ''),
-('IS_COM*2', 'Subject 2 of Combo*',  '3', ''),
-('ISC301', 'e-Commerce',  '3', 'Recommended to take this course after OJT'),
-('ITB302c', 'Business Intelligence (BI)',  '3', ''),
-('PMG201c', 'Project Management', '3', ''),
-('IS_COM*3', 'Subject 3 of Combo*',  '3', ''),
-('IS_COM*4', 'Subject 4 of Combo*', '3', ''),
-('IS_GRA_ELE', 'Graduation Elective - Information System_',  '10', '')
-
-
+('NWC204', 'Computer Networking ', '3 ', ' ')
 GO
 
 CREATE TABLE Major(
@@ -145,7 +126,7 @@ GO
 -- Create a curriculum table
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11), -- Declare the ID of the training program as a String that can be written in Vietnamese
-CuName NVARCHAR(100), -- Declare the Name of the training program as a String that can be written in Vietnamese
+CuName NVARCHAR(255), -- Declare the Name of the training program as a String that can be written in Vietnamese
 SpID NVARCHAR(3), -- Declare the ID of the major as a String that can be written in Vietnamese
 CONSTRAINT PK_Curriculum PRIMARY KEY (CuID), -- Add primary key condition PK_Curriculum by CuID
 CONSTRAINT FK_CurriculumSpecialization FOREIGN KEY (SpID) REFERENCES Specialization(SpID), -- Add foreign key condition FK_CurriculumSpecialization by SpID
@@ -232,7 +213,7 @@ GO
 
 CREATE TABLE CurriculumDetail(
 CDID INT IDENTITY,
-SuID CHAR(6),
+SuID NVARCHAR(20),
 CuID NVARCHAR(11),
 CDSemester int,
 CONSTRAINT PK_CurriculumDetail PRIMARY KEY (CDID),
