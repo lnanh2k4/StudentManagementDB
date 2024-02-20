@@ -105,7 +105,10 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('SAP321', 'SAP General 2', '3', 'SAP311'),
 ('DPL303m', 'Deep Learning', '3', 'AIL304m'),
 ('AIL304m', 'Machine Learning', '3', 'MAS291, MAE101'),
-('DBM301', 'Data Mining', '3', '')
+('DBM301', 'Data Mining', '3', ''),
+('PMG202c','Project Management','3',''),
+('NWC203c', 'Computer Networking',  '3', ''),
+('WED201c', 'Web Design', '3', '')
 
 
 GO
@@ -369,7 +372,6 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('SAP321','BIT_SE_18A','7'),															
 															('DPL303m','BIT_SE_18A','8'),
 															('AIL304m','BIT_SE_18A','7'),
-															
 															('DBM301','BIT_SE_18A','7'),
 
 															('OTP101','BIT_SE_18C','0'),
@@ -429,8 +431,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('SAP321','BIT_SE_18C','7'),															
 															('DPL303m','BIT_SE_18C','8'),
 															('AIL304m','BIT_SE_18C','7'),
-														
-															('DBM301','BIT_SE_18C','7')
+														     ('DBM301','BIT_SE_18C','7')
 
 GO
 
