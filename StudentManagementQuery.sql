@@ -26,79 +26,13 @@ CREATE TABLE Subject(
 SuID CHAR(6),
 SuName NVARCHAR(30),
 SuNoCredit INT,
-SuPrerequisite TEXT,
+SuDes TEXT,
 CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 )
 GO
 
-INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES 
-('OTP101', ' Orientation and General Training Program' , ' 0', ''),
-('PEN', ' Preparation English', ' 0', ' '),
-('PHE_COM*1', ' Physical Education 1', ' 2', ' '),
-('TMI_ELE', ' Traditional musical instrument', ' 3', ' '),
-('CEA201', ' Computer Organization and Architecture', ' 3', ' '),
-('CSI104', ' Introduction to Computer', ' 3', ' '),
-('MAE101', ' Mathematics for Engineering', ' 3', ' '),
-('PHE_COM*2', ' Physical Education 2', ' 2', ' '),
-('PRF192', ' Programming Fundamentals', ' 3', ' '),
-('SSL101c', ' Academic Skills for University Success', ' 3', ' '),
-('MAD101', ' Discrete mathematics', ' 3', ' '),
-('NWC204', ' Computer Networking', ' 3', ' '),
-('OSG202', ' Operating Systems', ' 3', ' '),
-('PHE_COM*3', ' Physical Education 3', ' 2', ' '),
-('PRO192', ' Object-Oriented Programming', ' 3', ' Pass PRF192'),
-('SSG104', ' Communication and In-Group Working Skills', ' 3', ' '),
-('CSD201', ' Data Structures and Algorithms', ' 3', ' PRO192'),
-('DBI202', ' Introduction to Databases', ' 3', ' '),
-('ITA203c', ' Management Information Systems', ' 3', ' '),
-('JPD113', ' Elementary Japanese 1- A1.1', ' 3', ' '),
-('LAB211', ' OOP with Java Lab', ' 3', ' PRO192'),
-('JPD123', ' Elementary Japanese 1-A1.2', ' 3', ' JPD113'),
-('MAS291', ' Statistics & Probability', ' 3', ' MAE101 or MAC101'),
-('PRC391c', ' Cloud Computing', ' 3', ' PRO192'),
-('PRJ302', ' Java Web Application Development', ' 3', ' DBI202, PRO192'),
-('SWE201c', ' Introduction to Software Engineering', ' 3', ' PRO192 (not applied to the BIT_AI17 and BA programs)'),
-('DTA301', ' Data Analysis', ' 3', ' PRO192, CSD201, DBI202, MAS291'),
-('ISM302', ' Enterprise Resource Planning (ERP)', ' 3', ' '),
-('ISP392', ' Information System Programming Project', ' 3', ' PRJ302, SWE201c'),
-('ITA301', ' Information System Design & Analysis', ' 3', ' ITA203c, DBI202'),
-('ITE302c', ' Ethics in IT', ' 3', ' None'),
-('ENW492c', ' Academic Writing Skills', ' 3', ' '),
-('OJT202', ' On-The-Job Training', ' 10', ' Students attain 90% of the total credits from term 1-term 5 (excluding Physical Education and OTP Programs) Students choosing JS combo (Japanese Bridge Engineer) have to pass JPD123'),
-('EXE101', ' Experiential Entrepreneurship 1', ' 3', ' '),
-('IS_COM*1', ' Subject 1 of Combo*', ' 3', ' '),
-('IS_COM*2', ' Subject 2 of Combo*', ' 3', ' '),
-('ISC301', ' e-Commerce', ' 3', ' Recommended to take this course after OJT'),
-('ITB302c', ' Business Intelligence (BI)', ' 3', ' '),
-('EXE201', ' Experiential Entrepreneurship 2', ' 3', ' EXE101'),
-('IS_COM*3', ' Subject 3 of Combo*', ' 3', ' '),
-('IS_COM*4', ' Subject 4 of Combo*', ' 3', ' '),
-('MLN111', ' Philosophy of Marxism', ' 3', ' '),
-('MLN122', ' Political economics of Marxism', ' 2', ' '),
-('PMG201c', ' Project Management', ' 3', ' None'),
-('HCM202', ' HCM Ideology', ' 2', ' MLN111, MLN122'),
-('IS_GRA_ELE', ' Graduation Elective - Information System', ' 10', ' '),
-('MLN131', ' Scientific socialism', ' 2', ' MLN111, MLN122'),
-('VNR202', ' History of CPV', ' 2', ' MLN111, MLN122'),
-('NWC204', 'Computer Networking ', '3 ', ' '),
-('ITA203c', 'Management Information Systems',  '3', ''),
-('PRJ302', 'Java Web Application Development', '3', 'DBI202, PRO192'),
-('PRC391c', 'Cloud Computing',  '3', 'PRO192'),
-('DTA301', 'Data Analysis',  '3', 'PRO192, CSD201, DBI202, MAS291'),
-('ISM302', 'Enterprise Resource Planning (ERP)', '3', ''),
-('ISP392', 'Information System Programming Project', '3', 'PRJ302, SWE201c'),
-('ITA301', 'Information System Design & Analysis',  '3', 'ITA203c, DBI202'),
-('ITE302c', 'Ethics in IT',  '3', 'None'),
-('IS_COM*1', 'Subject 1 of Combo*', '3', ''),
-('IS_COM*2', 'Subject 2 of Combo*',  '3', ''),
-('ISC301', 'e-Commerce',  '3', 'Recommended to take this course after OJT'),
-('ITB302c', 'Business Intelligence (BI)',  '3', ''),
-('PMG201c', 'Project Management', '3', ''),
-('IS_COM*3', 'Subject 3 of Combo*',  '3', ''),
-('IS_COM*4', 'Subject 4 of Combo*', '3', ''),
-('IS_GRA_ELE', 'Graduation Elective - Information System_',  '10', '')
-
-
+INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES ('','','',''),
+														 ('','','','')
 GO
 
 CREATE TABLE Major(
@@ -124,24 +58,6 @@ CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
 CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID),
 )
 GO
-
-INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
-													('HM', 'Hotel management','BA'),
-													('IB', 'International Business','BA'),
-													('MC', 'Multimedia Communication','BA'),
-													('MKT', 'Digital Marketing','BA'),
-													('TM', 'Tourism and Travel Management','BA'),
-													('EN', 'English Studies','ES'),
-													('AI', 'Artificial Intelligence','IT'),
-													('GD', 'Digital Art & Design','IT'),
-													('IA', 'Information Assurance','IT'),
-													('IoT','Internet of Things','IT'),
-													('IS', 'Information System','IT'),
-													('SE', 'Software Engineering','IT'),
-													('JP', 'Japanese Studies','JP'),
-													('KR', 'Korean Studies','KR')
-GO
-
 -- Create a curriculum table
 CREATE TABLE Curriculum(
 CuID NVARCHAR(11), -- Declare the ID of the training program as a String that can be written in Vietnamese
@@ -229,6 +145,24 @@ INSERT INTO Curriculum(CuID,CuName,SpID) VALUES
 ('BJP_JP_18D','Bachelor Program of Japanese Studies, Japanese Studies for level 1 of the Preparatory English period','JP')
 
 GO
+
+INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
+													('HM', 'Hotel management','BA'),
+													('IB', 'International Business','BA'),
+													('MC', 'Multimedia Communication','BA'),
+													('MKT', 'Digital Marketing','BA'),
+													('TM', 'Tourism and Travel Management','BA'),
+													('EN', 'English Studies','ES'),
+													('AI', 'Artificial Intelligence','IT'),
+													('GD', 'Digital Art & Design','IT'),
+													('IA', 'Information Assurance','IT'),
+													('IoT','Internet of Things','IT'),
+													('IS', 'Information System','IT'),
+													('SE', 'Software Engineering','IT'),
+													('JP', 'Japanese Studies','JP'),
+													('KR', 'Korean Studies','KR')
+GO
+
 
 CREATE TABLE CurriculumDetail(
 CDID INT IDENTITY,
@@ -422,6 +356,8 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('AIL304m','BIT_SE_18C','7'),
 															('AIP392','BIT_SE_18C','8'),
 															('DBM301','BIT_SE_18C','7')
+
+
 
 GO
 
