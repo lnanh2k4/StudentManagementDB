@@ -109,7 +109,23 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('PMG202c','Project Management','3',''),
 ('NWC203c', 'Computer Networking',  '3', ''),
 ('WED201c', 'Web Design', '3', ''),
-('PRJ301','Java Web Application Development',3,'DBI202, PRO192')
+('PRJ301','Java Web Application Development','3','DBI202, PRO192'),
+('ACC101', 'Principles of Accounting', '3', ' '),
+('SAP341', 'SAP Application Development with ABAP', '3', 'PRO192, SAP311'),
+('FER202', 'Front-End web development with React', '3', 'WED201c'),
+('PRU212', 'C# Programming and Unity', '3', 'PRO192'),
+('PRU221m', 'PRU221m', '3', 'PRU211m'),
+('ISM301', 'Enterprise Resource Planning (ERP)', '3', 'Recommended to take this course after OJT'),
+('ISP490', 'IS Capstone Project', '10', 'Successfully complete (*) below topics: - Project Management – PMG201c or PMG202c - Information System Analysis and Design – ITA301 o Pass 60% of total credits of selected combo. o Pass OJT202 (not apply to international students) o Pass 80% of total credits (PHE_COM* and OJT excluded) (*): GPA must be greater than or equal to 4.'),
+('SAP490', 'SAP Interdisciplinary Capstone Project', '10', 'Pass SAP331 (BA), SAP341 (IT) o Complete (*) other subjects of combo SAP and PMG20xc (x = 1, 2) o Pass OJT202/OJB202 (not apply to international students) o Pass 80% of total credits (PHE_COM* and OJT excluded) (*): GPA must be greater than or equal to 4.'),
+('EXE401', 'Graduation Thesis Startup Project', '10', 'Passed EXE201 (Experiential Entrepreneurship 2_Trải nghiệm khởi nghiệp 2) 2. Passed OJT (for Vietnamese students) 3. Passed 80% of total credits (PHE_COM*, OJT excluded for Vietnamese students, PHE_COM* excluded for international students). 4. Satisfied Article V - Decision 911/QĐ-ĐHFPT dated 31/8/2023 on Instructions for implementing the Experiential Entrepreneurship program at FPT University.'),
+('KMS301', 'Knowledge management system', '3', 'ITA301, ISM302'),
+('DSS301', 'Decision Support System', '3', 'PRJ302'),
+('BPS301', 'Business Process Management System', '3', 'ISM302'),
+('FIN202', 'Principles of Corporate Finance', '3', ' '),
+('JTW301', 'Japanese IT terms and text translation', '3', 'Passed JJB391 With JS: JPD316'),
+('SAP331', 'SAP Configuration', '3', 'SAP321')
+
 GO
 
 CREATE TABLE Major(
