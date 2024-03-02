@@ -32,8 +32,6 @@ CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 GO
 
 
-
-
 INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES 
 ('OTP101', ' Orientation and General Training Program' , ' 0', ''),
 ('PEN', ' Preparation English', ' 0', ' '),
@@ -281,7 +279,6 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES
 ('CMC201c', 'Creative Writing', '3', ''),
 ('BDI201', 'Brand Identity Design', '3', 'DTG111 or DTG102'),
 ('CCM301', 'Crisis Communications Management', '3', 'CCO201 or MKT304c or MKT304'),
-('ITA203c', 'Information System Overview', '3', ''),
 ('MKT301', 'Marketing Research', '3', 'MKT101'),
 ('MKT202', 'Services Marketing Management', '3', 'MKT101'),
 ('MKT304', 'Integrated Marketing Communications', '3', 'MKT101'),
