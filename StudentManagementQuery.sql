@@ -493,7 +493,7 @@ CONSTRAINT FK_CurriculumDetail_Curriculum FOREIGN KEY (CuID) REFERENCES Curricul
 )
 GO
 
-INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18B','0'),
+INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B','0'),
 														    ('PEN','BIT_SE_18B','0'),  
 															('TMI_ELE','BIT_SE_18B','0'),
 														    ('MLN111','BIT_SE_18B','8'),
