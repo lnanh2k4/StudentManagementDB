@@ -52,7 +52,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES
 ('SSG104', ' Communication and In-Group Working Skills', ' 3', ' '),
 ('CSD201', ' Data Structures and Algorithms', ' 3', ' PRO192'),
 ('DBI202', ' Introduction to Databases', ' 3', ' '),
-('ITA203c', ' Management Information Systems', ' 3', ' '),
+
 ('JPD113', ' Elementary Japanese 1- A1.1', ' 3', ' '),
 ('LAB211', ' OOP with Java Lab', ' 3', ' PRO192'),
 ('JPD123', ' Elementary Japanese 1-A1.2', ' 3', ' JPD113'),
@@ -780,7 +780,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('ITE302c','BIT_IS_K18B','5'),
 															('OJT202','BIT_IS_K18B','6'),
 															('MLN122','BIT_IS_K18B','8'),
-															('ITA201c','BIT_IS_K18B','3'),
+															
 															('PRJ302','BIT_IS_K18B','4'),
 															('ITA301','BIT_IS_K18B','5'),
 															('SWE201c','BIT_IS_K18B','4'),
@@ -832,7 +832,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('ITE302c','BIT_IS_K18A','5'),
 															('OJT202','BIT_IS_K18A','6'),
 															('MLN122','BIT_IS_K18A','8'),
-															('ITA201c','BIT_IS_K18A','3'),
+															
 															('PRJ302','BIT_IS_K18A','4'),
 															('ITA301','BIT_IS_K18A','5'),
 															('SWE201c','BIT_IS_K18A','4'),
@@ -884,7 +884,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('ITE302c','BIT_IS_K18C','5'),
 															('OJT202','BIT_IS_K18C','6'),
 															('MLN122','BIT_IS_K18C','8'),
-															('ITA201c','BIT_IS_K18C','3'),
+															
 															('PRJ302','BIT_IS_K18C','4'),
 															('ITA301','BIT_IS_K18C','5'),
 															('SWE201c','BIT_IS_K18C','4'),
@@ -936,7 +936,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('ITE302c','BIT_IS_K18D','5'),
 															('OJT202','BIT_IS_K18D','6'),
 															('MLN122','BIT_IS_K18D','8'),
-															('ITA201c','BIT_IS_K18D','3'),
+															
 															('PRJ302','BIT_IS_K18D','4'),
 															('ITA301','BIT_IS_K18D','5'),
 															('SWE201c','BIT_IS_K18D','4'),
