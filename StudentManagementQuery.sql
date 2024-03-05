@@ -22,7 +22,7 @@ INSERT INTO Campus(CaID,CaName,CaAddress,CaEmail,CaHotline) VALUES ('FUHN','Ha N
 																   ('FUCT','Can Tho','Rau Ram Bridge, Area 6, extended Nguyen Van Cu, An Binh ward, Ninh Kieu district, city. Can Tho','fptu.cantho@fe.edu.vn','0292 7773636')
 GO
 
-CREATE TABLE Subject(
+CREATE TABLE Subject (
 SuID NVARCHAR(20),
 SuName NVARCHAR(255),
 SuNoCredit INT,
@@ -175,7 +175,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES
 ('WDU202c', 'UI/UX Design', '3', ''),
 ('DTG102', 'Visual Design Tools', '3', ''),
 ('DTG302', 'Principles of Compositing', '3', ''),
-('PFD201', 'Photography for Designer', '3', ''),
+
 ('ANC301', 'Character Development', '3', 'DRD20x or IPD201'),
 ('SDP201', 'Sound Production', '3', ''),
 ('ANS201', 'Idea & Script Development', '3', ''),
