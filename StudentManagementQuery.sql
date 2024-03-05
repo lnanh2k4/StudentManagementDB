@@ -633,7 +633,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES
 															('CEA201','BIT_SE_18C','1'),
 															('PRF192','BIT_SE_18C','1'),
 															('PRO192','BIT_SE_18C','2'),
-															('SSG104','BIT_SE_K18B','2'),
+															('SSG104','BIT_SE_18','2'),
 															('CSD201','BIT_SE_18C','3'),
 															('OSG202','BIT_SE_18C','2'),
 															('NWC204','BIT_SE_18C','2'),
