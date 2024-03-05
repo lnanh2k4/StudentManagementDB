@@ -508,7 +508,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('EXE101','BIT_SE_18B','7'),
 															('EXE201','BIT_SE_18B','8'),
 															('MAE101','BIT_SE_18B','1'),
-															('SSG104','BIT_SE_K18B','2'),
+															('SSG104','BIT_SE_18B','2'),
 															('MAD101','BIT_SE_18B','2'),
 															('MAS291','BIT_SE_18B','4'),
 															('CSI104','BIT_SE_18B','1'),
@@ -551,7 +551,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BIT_SE_18
 															('SAP321','BIT_SE_18B','7'),															
 															('DPL303m','BIT_SE_18B','8'),
 															('AIL304m','BIT_SE_18B','7'),															
-															('DBM301','BIT_SE_18B','7'),
+															('DBM301','BIT_SE_18B','7')
 
 															('OTP101','BIT_SE_18A','0'),
 														    ('PEN','BIT_SE_18A','0'),              
