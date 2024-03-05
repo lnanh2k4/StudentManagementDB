@@ -22,7 +22,7 @@ INSERT INTO Campus(CaID,CaName,CaAddress,CaEmail,CaHotline) VALUES ('FUHN','Ha N
 																   ('FUCT','Can Tho','Rau Ram Bridge, Area 6, extended Nguyen Van Cu, An Binh ward, Ninh Kieu district, city. Can Tho','fptu.cantho@fe.edu.vn','0292 7773636')
 GO
 
-CREATE TABLE Subject(
+CREATE TABLE Subject (
 SuID NVARCHAR(20),
 SuName NVARCHAR(255),
 SuNoCredit INT,
@@ -50,7 +50,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES
 ('SSG104', ' Communication and In-Group Working Skills', ' 3', ' '),
 ('CSD201', ' Data Structures and Algorithms', ' 3', ' PRO192'),
 ('DBI202', ' Introduction to Databases', ' 3', ' '),
-('ITA203c', ' Management Information Systems', ' 3', ' '),
+
 ('JPD113', ' Elementary Japanese 1- A1.1', ' 3', ' '),
 ('LAB211', ' OOP with Java Lab', ' 3', ' PRO192'),
 ('JPD123', ' Elementary Japanese 1-A1.2', ' 3', ' JPD113'),
@@ -175,7 +175,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES
 ('WDU202c', 'UI/UX Design', '3', ''),
 ('DTG102', 'Visual Design Tools', '3', ''),
 ('DTG302', 'Principles of Compositing', '3', ''),
-('PFD201', 'Photography for Designer', '3', ''),
+
 ('ANC301', 'Character Development', '3', 'DRD20x or IPD201'),
 ('SDP201', 'Sound Production', '3', ''),
 ('ANS201', 'Idea & Script Development', '3', ''),
@@ -508,7 +508,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('EXE101','BIT_SE_18B','7'),
 															('EXE201','BIT_SE_18B','8'),
 															('MAE101','BIT_SE_18B','1'),
-															('SSG104','BIT_SE_K18B','2'),
+															('SSG104','BIT_SE_18B','2'),
 															('MAD101','BIT_SE_18B','2'),
 															('MAS291','BIT_SE_18B','4'),
 															('CSI104','BIT_SE_18B','1'),
@@ -551,7 +551,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('SAP321','BIT_SE_18B','7'),															
 															('DPL303m','BIT_SE_18B','8'),
 															('AIL304m','BIT_SE_18B','7'),															
-															('DBM301','BIT_SE_18B','7'),
+															('DBM301','BIT_SE_18B','7')
 
 															('OTP101','BIT_SE_18A','0'),
 														    ('PEN','BIT_SE_18A','0'),              
@@ -777,7 +777,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('ITE302c','BIT_IS_K18B','5'),
 															('OJT202','BIT_IS_K18B','6'),
 															('MLN122','BIT_IS_K18B','8'),
-															('ITA201c','BIT_IS_K18B','3'),
+															
 															('PRJ302','BIT_IS_K18B','4'),
 															('ITA301','BIT_IS_K18B','5'),
 															('SWE201c','BIT_IS_K18B','4'),
@@ -829,7 +829,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('ITE302c','BIT_IS_K18A','5'),
 															('OJT202','BIT_IS_K18A','6'),
 															('MLN122','BIT_IS_K18A','8'),
-															('ITA201c','BIT_IS_K18A','3'),
+															
 															('PRJ302','BIT_IS_K18A','4'),
 															('ITA301','BIT_IS_K18A','5'),
 															('SWE201c','BIT_IS_K18A','4'),
@@ -881,7 +881,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('ITE302c','BIT_IS_K18C','5'),
 															('OJT202','BIT_IS_K18C','6'),
 															('MLN122','BIT_IS_K18C','8'),
-															('ITA201c','BIT_IS_K18C','3'),
+															
 															('PRJ302','BIT_IS_K18C','4'),
 															('ITA301','BIT_IS_K18C','5'),
 															('SWE201c','BIT_IS_K18C','4'),
@@ -933,7 +933,7 @@ INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES ('OTP101','BIT_SE_18B'
 															('ITE302c','BIT_IS_K18D','5'),
 															('OJT202','BIT_IS_K18D','6'),
 															('MLN122','BIT_IS_K18D','8'),
-															('ITA201c','BIT_IS_K18D','3'),
+															
 															('PRJ302','BIT_IS_K18D','4'),
 															('ITA301','BIT_IS_K18D','5'),
 															('SWE201c','BIT_IS_K18D','4'),
