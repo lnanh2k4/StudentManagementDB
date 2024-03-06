@@ -26,15 +26,19 @@ CREATE TABLE Subject (
 SuID NVARCHAR(20),
 SuName NVARCHAR(255),
 SuNoCredit INT,
-SuDes TEXT,
+SuPrerequisite TEXT,
 CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 )
 GO
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES ('','','',''),
 														 ('','','','')
 =======
+>>>>>>> 91e093376e922dfe9e4a9920ce17f7d89573c14d
 INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES 
 ('OTP101', ' Orientation and General Training Program' , ' 0', ''),
 ('PEN', ' Preparation English', ' 0', ' '),
@@ -96,7 +100,7 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('PRN231', 'Building Cross-Platform Back-End Application With .NET', '3', 'PRN221 ( BUILDING CROSS-PLATFORM WEB APPLICATION WITH .NET )'),
 ('JPD133', 'Elementary Japanese 1-A1/A2', '3', 'JPD123'),
 ('JPD316', 'Intermediate Japanese 1-B1/B2', '6', 'Passed JPD226 For JS: Passed OJT202'),
-('JIT401', 'Information Technology Japanese', '3', 'Passed JJB391 JS: JPD316'),
+
 ('JFE301', 'Japanese fundamental information technologyskill standards', '3', ''),
 ('JPD326', 'Intermediate Japanese 2-B2.1', '3', 'Passed JPD223 or JPD226 JS: JPD322 or JPD316'),
 ('PRP201c', 'Python programming', '3', 'Recommend to have knowledge of basic programming in advance'),
@@ -356,10 +360,104 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('FIN306c', 'Financial Reporting', '3', 'Passed ACC101'),
 ('FIN307', 'Financial Taxation', '3', 'ACC101'),
 ('FIN406', 'Financial Risk Management', '3', 'MAS202 and FIN402'),
+<<<<<<< HEAD
+('GRF491', 'Graduation Thesis - Finance', '10', 'OJB202 2. Passed 80% of the programs total credits (not including VOV) 3. 5 Finance concentration courses and RMB301 or RMB302'),
+('ENP102', 'English phonetics and phonology in use', '3', ''),
+('ENG302c', 'Advanced English Grammar', '3', ''),
+('EAW211', 'English Academic Writing 1', '3', ''),
+('EAW221', 'English Academic Writing 2', '3', 'Passed EAW211'),
+('ECR201', 'Critical Reading', '3', ''),
+('EAL201', 'Academic Listening', '3', ''),
+('LTG202', 'Introduction to Linguistics', '3', ''),
+('SEM101', 'Semantics', '3', 'Passed LTG202 and ENG302c and ENP101 or ENP102'),
+('ERW411', 'Read-Think-Write 1', '3', 'Passed ECR201 & EAW221'),
+('ERW421', 'Read-Think-Write 2', '3', 'Passed ERW411'),
+('ESL101', 'Sociolinguistics', '3', 'Passed LTG202, SEM101, ECB101'),
+('EPE301c', 'Professional Ethics', '3', ''),
+('LIT301', 'British and American Literature', '3', 'ECR201, EAW221'),
+('ELR301', 'Research Methods', '3', 'ERW421'),
+('ECB101', 'Culture of English-Speaking Countries', '3', ''),
+('OJE202', 'On-The-Job Training', '10', 'Students attained 90% of the total credits from semester 1-semester 5 (excluding Physical Education PHE_COM* and Military Program)'),
+('ELT492', 'Graduation Thesis - English Studies', '10', '1. Subjects: K14: ELT401; ELI401; ENG301; ENP101; LTG20x; SSC201; ELR301; ENB101 K15 onwards: ELR301, ELT401, ELI401, ENB301 2. Passed OJE202 3. Passed 80% of the total credits in the program (not including PHE_COM* and OJE202)'),
+('ELP491', 'Graduation Project - English Studies', '10', '1. Subjects: ELR301, ELT401, ELI401, ENB301 2. Passed OJE202 3. Passed 80% of the total credits in the program (not including PHE_COM* and OJE202)'),
+('SSC302c', 'Advanced Presentation Skills', '3', ''),
+('EBC301c', 'Business English Communication', '3', ''),
+('ECC301c', 'Cross-cultural Communication', '3', ''),
+('EPC301', 'Persuasive Communication', '3', 'Passed ERW411 and SSC302c and SSG103 or SSG104'),
+('ELT301', 'Translation 1', '3', 'ENS411 & ENS421 & ENR401 & ENW401 & ENP101 & ENG301 K15 onward: Passed ERW411 & LTG202'),
+('ELT401', 'Translation 2', '3', 'Passed ELT301'),
+('ELI301', 'Interpretation 1', '3', 'Passed ENW401 or (ENS412 & ENS422) or ENT503 K15 onward: Passed EAL201 & SSC302c & LTG202'),
+('ELI401', 'Interpretation 2', '3', 'Passed ELI301'),
+('ENB301', 'Business Writing', '3', 'Passed EAW221'),
+('ETT301', 'Understanding Language Testing', '3', 'Passed ESL101, ELT401, ELI401, ERW421, EOB301'),
+('ELP311c', 'English Language Teaching part 1', '3', ''),
+('EOB301', 'Outcome-based Course Design in English Language Teaching', '3', '"EAL201, ERW421, EPC301, ESL101"'),
+('ETP401', 'Language Teaching Practice', '3', 'ELP311c, EOB301'),
+('ELP321c', 'English Language Teaching part 2', '3', 'Passed ELP311c'),
+('JTI301', 'Introductory Translation& interpreting', '3', 'Passed JBI301&JBT301'),
+('JTE301', 'Translation in Economics & Commerce', '3', 'Passed JBI301&JBT301'),
+('JTT301', 'Translation in Tourism', '3', 'Passed JBI301 & JBT301'),
+('JPE301', 'Translation in Education', '3', 'Passed: JBI301&JBT301'),
+('JTN301', 'Translation on international hot news', '3', 'Passed JBI301&JBT301'),
+('JFT301', 'Japanese for Tourism', '3', 'Passed JSC301'),
+('JHI301', 'The International Hospitality Industry', '3', 'Passed: JSC301'),
+('JTD301', 'Tourism Destination of VietNam & Japan', '3', 'Passed JSC301'),
+('JVR301', 'Japan - Viet Nam economic relations & sustainable tourism development trend ', '3', 'Passed: JSC301'),
+('JIT401', 'Information Technology Japanese', '3', 'Passed JJB391 JS: JPD316'),
+('JIS401', 'Japanese in Software', '3', 'Passed JJB391'),
+('JSI201', 'Information System', '3', 'Passed JJB391'),
+('JSC201', 'Computer System', '3', 'Passed:JJB391'),
+('OJP202', 'On-the-job Training', '10', 'Complete 90% of total credits from semester 1 to semester 5 (excluding National Defense Education and Physical Education)'),
+('JPD226', 'Pre-Intermediate Japanese 2-B1', '6', 'Passed PD122 or JPD126 JS: JPD131 or JPD133'),
+('JPD116', 'Elementary Japanese 1-A1/A2', '6', ''),
+('JPD126', 'Elementary Japanese 2-A2', '6', 'JPD112 or JPD116'),
+('JPD216', 'Pre-Intermediate Japanese 1-A2/B1', '6', 'Passed JPD122 or JPD126 JS: JPD131 or JPD133'),
+('JLR302', 'Research Method', '3', 'Passed JIG301'),
+('JJB391', 'Japanese for JLPT &BJT', '3', 'Passed JPD346'),
+('LTG203', 'Introduction to linguistics', '3', 'Passed JPD346'),
+('JBI301', 'Basic Skills of Interpreting', '3', 'Passed JPD346'),
+('JPB301', 'Japanese business language & business manner', '3', 'Passed JPD326'),
+('JBT301', 'Basic skills of Translation', '3', 'Passed JPD346'),
+('JJL301', 'Japanese Literature', '3', 'Passed JSC301 & JIG301'),
+('JSC301', 'Japanese Studies and Japanese Culture', '3', 'Passed: JPD346'),
+('JIG301', 'Basic Issues of Japanese Grammar', '3', 'Passed JPD346'),
+('JGT492', 'Graduation Thesis-Japanese Studies', '10', 'Pass OJP202 II. Pass 80% of total credits (VOVxxx and OJP202 excluded) III. 1) For students from keyword 15 onwards: Pass ENW492c, JIJ301, JJL301, JLR302'),
+('JGP491', 'Graduation Project - Japanese Studies', '10', 'Pass OJP202 II. Pass 80% of total credits (VOVxxx and OJP202 excluded) III. 1'),
+('SWC201', 'Software Development Process', '3', 'Passed JJB391'),
+('KRE301', 'Korean Economy', '3', 'KRL421'),
+('KLC301', 'Chinese characters in Korean', '3', 'KRL511'),
+('KLB401', 'Business Korean', '3', 'KLI311 and KLT311'),
+('KOI401', 'Office Informatics in Korean', '3', 'KRL421'),
+('KPS301', 'Korean Language Pedagogical Skills', '3', 'KRL421'),
+('KRH401', 'Korean for Restaurants and Hotels', '3', 'KRL421'),
+('KRL201', 'Elementary Korean 2', '6', 'KRL101'),
+('KRL311', 'Intermediate Korean 1', '6', 'KRL201'),
+('KRL321', 'Intermediate Korean 2', '6', 'KRL311'),
+('KRL411', 'Intermediate Korean 3', '6', 'KRL321'),
+('KRL421', 'Intermediate Korean 4', '6', 'KRL411'),
+('KRL511', 'Advanced Korean 1', '6', 'Pass KRL421'),
+('KRL521', 'Advanced Korean 2', '6', 'KRL511'),
+('KIT491', 'Korean for TOPIK', '3', 'KRL421'),
+('OJK202', 'On-The-Job-Training', '10', 'Complete 90% of total credits from semester 1 to semester 5 (excluding National Defense and Physical Education Subject)'),
+('KRC301', 'Korean Culture', '3', 'KRL321'),
+('KLE301', 'Korean Literature', '3', 'KRL421'),
+('KLI311', 'Interpretation 1', '3', 'KRL511'),
+('KLI321', 'Interpretation 2', '3', 'KLI311'),
+('KLT311', 'Translation 1', '3', 'KRL511'),
+('KLT321', 'Translation 2', '3', 'KLT311'),
+('KLR301c', 'Scientific Research Methods', '3', ''),
+('KRP301', 'Korean Phonetics', '3', 'Pass: KRL321 or KRL222'),
+('KRG301', 'Korean grammar and vocabulary', '3', 'KRL421'),
+('KRT491', 'Graduation Thesis', '3', 'Pass OJK202 II. Passed 80% of the total credits in the program (excluding PHE_COM* and OJK202)'),
+('KRP491', 'Graduation Project', '3', ' Pass OJK202 II. Passed 80% of the total credits in the program (excluding PHE_COM* and OJK202)'),
+('ICT301', 'Instructor Competencies Training', '3', ''),
+('KGT401', 'Tour guide training (Korean)', '3', 'KRL421')
+=======
 ('GRF491', 'Graduation Thesis - Finance', '10', 'OJB202 2. Passed 80% of the programs total credits (not including VOV) 3. 5 Finance concentration courses and RMB301 or RMB302')
 
 
 >>>>>>> e734395bb13eb622c2a428255c22bf51250af3aa
+>>>>>>> 91e093376e922dfe9e4a9920ce17f7d89573c14d
 GO
 
 CREATE TABLE Major(
@@ -3830,8 +3928,8 @@ GO
 --DROP TABLE Student
 --GO
 
---USE master
---GO
+USE master
+GO
 
---DROP DATABASE StudentManagementDB
---GO
+DROP DATABASE StudentManagementDB
+GO
