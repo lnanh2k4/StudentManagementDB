@@ -31,14 +31,7 @@ CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 )
 GO
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-INSERT INTO Subject(SuID,SuName,SuNoCredit,SuDes) VALUES ('','','',''),
-														 ('','','','')
-=======
->>>>>>> 91e093376e922dfe9e4a9920ce17f7d89573c14d
 INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES 
 ('OTP101', ' Orientation and General Training Program' , ' 0', ''),
 ('PEN', ' Preparation English', ' 0', ' '),
@@ -360,7 +353,6 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('FIN306c', 'Financial Reporting', '3', 'Passed ACC101'),
 ('FIN307', 'Financial Taxation', '3', 'ACC101'),
 ('FIN406', 'Financial Risk Management', '3', 'MAS202 and FIN402'),
-<<<<<<< HEAD
 ('GRF491', 'Graduation Thesis - Finance', '10', 'OJB202 2. Passed 80% of the programs total credits (not including VOV) 3. 5 Finance concentration courses and RMB301 or RMB302'),
 ('ENP102', 'English phonetics and phonology in use', '3', ''),
 ('ENG302c', 'Advanced English Grammar', '3', ''),
@@ -452,12 +444,10 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('KRP491', 'Graduation Project', '3', ' Pass OJK202 II. Passed 80% of the total credits in the program (excluding PHE_COM* and OJK202)'),
 ('ICT301', 'Instructor Competencies Training', '3', ''),
 ('KGT401', 'Tour guide training (Korean)', '3', 'KRL421')
-=======
-('GRF491', 'Graduation Thesis - Finance', '10', 'OJB202 2. Passed 80% of the programs total credits (not including VOV) 3. 5 Finance concentration courses and RMB301 or RMB302')
 
 
->>>>>>> e734395bb13eb622c2a428255c22bf51250af3aa
->>>>>>> 91e093376e922dfe9e4a9920ce17f7d89573c14d
+
+
 GO
 
 CREATE TABLE Major(
