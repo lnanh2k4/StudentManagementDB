@@ -1,4 +1,4 @@
-﻿INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES 	('OTP101','BBA_TM_18D','0'),
+﻿INSERT INTO CurriculumDetail(SuID,CuID,CDSemester) VALUES   ('OTP101','BBA_TM_18D','0'),
 															('PEN','BBA_TM_18D','0'),
 															('TMI_ELE','BBA_TM_18D','0'),
 															('ECO111','BBA_TM_18D','1'),
