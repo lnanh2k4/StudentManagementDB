@@ -1,0 +1,8 @@
+﻿CREATE TABLE Specialization(
+SpID NVARCHAR(3),
+SpName NVARCHAR(30),
+MaID NVARCHAR(3),
+CONSTRAINT PK_Specialization PRIMARY KEY (SpID),
+CONSTRAINT FK_SpecializationMajor FOREIGN KEY (MaID) REFERENCES Major(MaID)
+)
+GO

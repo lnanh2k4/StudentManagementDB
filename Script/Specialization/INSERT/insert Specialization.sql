@@ -1,0 +1,16 @@
+﻿INSERT INTO Specialization(SpID,SpName,MaID) VALUES ('FIN', 'Finance','BA'),
+													('HM', 'Hotel management','BA'),
+													('IB', 'International Business','BA'),
+													('MC', 'Multimedia Communication','BA'),
+													('MKT', 'Digital Marketing','BA'),
+													('TM', 'Tourism and Travel Management','BA'),
+													('EN', 'English Studies','ES'),
+													('AI', 'Artificial Intelligence','IT'),
+													('GD', 'Digital Art & Design','IT'),
+													('IA', 'Information Assurance','IT'),
+													('IoT','Internet of Things','IT'),
+													('IS', 'Information System','IT'),
+													('SE', 'Software Engineering','IT'),
+													('JP', 'Japanese Studies','JP'),
+													('KR', 'Korean Studies','KR')
+GO

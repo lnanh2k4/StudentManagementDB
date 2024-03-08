@@ -1,0 +1,8 @@
+﻿CREATE TABLE Subject (
+SuID NVARCHAR(20),
+SuName NVARCHAR(255),
+SuNoCredit INT,
+SuPrerequisite TEXT,
+CONSTRAINT PK_Subject PRIMARY KEY (SuID)
+)
+GO
