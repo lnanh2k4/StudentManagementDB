@@ -1,0 +1,10 @@
+﻿CREATE TABLE CurriculumDetail(
+CDID INT IDENTITY,
+SuID NVARCHAR(20),
+CuID NVARCHAR(11),
+CDSemester int,
+CONSTRAINT PK_CurriculumDetail PRIMARY KEY (CDID),
+CONSTRAINT FK_CurriculumDetail_Subject FOREIGN KEY (SuID) REFERENCES Subject(SuID),
+CONSTRAINT FK_CurriculumDetail_Curriculum FOREIGN KEY (CuID) REFERENCES Curriculum(CuID)
+)
+GO
