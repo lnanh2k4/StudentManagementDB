@@ -1038,4 +1038,9 @@ INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, Cu
 																							('SS180518', 'X', 'Lam Thi', '0', 'XLTSS180518@fpt.edu.vn', 'FUHCM', '1', 'BBA_MKT_18B'),
 																							('SS180519', 'Y', 'Lam Thi', '0', 'YLTSS180519@fpt.edu.vn', 'FUHCM', '9', 'BBA_FIN_18A'),
 																							('DE180520', 'Z', 'Lam Thi', '0', 'ZLTDE180520@fpt.edu.vn', 'FUDN', '2', 'BIT_SE_18B');
+
+
+
+
+																							
 GO
