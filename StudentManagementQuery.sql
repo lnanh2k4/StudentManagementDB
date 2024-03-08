@@ -32,11 +32,8 @@ CONSTRAINT PK_Subject PRIMARY KEY (SuID)
 GO
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> ed5699da5d63e43d010b77adac4bfe1e56997098
 INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES 
 ('OTP101', ' Orientation and General Training Program' , ' 0', ''),
 ('PEN', ' Preparation English', ' 0', ' '),
@@ -444,19 +441,11 @@ INSERT INTO Subject(SuID,SuName,SuNoCredit,SuPrerequisite) VALUES
 ('KRT491', 'Graduation Thesis', '3', 'Pass OJK202 II. Passed 80% of the total credits in the program (excluding PHE_COM* and OJK202)'),
 ('KRP491', 'Graduation Project', '3', ' Pass OJK202 II. Passed 80% of the total credits in the program (excluding PHE_COM* and OJK202)'),
 ('ICT301', 'Instructor Competencies Training', '3', ''),
-<<<<<<< HEAD
-('KGT401', 'Tour guide training (Korean)', '3', 'KRL421')
-
-
-
-
-=======
 ('KGT401', 'Tour guide training (Korean)', '3', 'KRL421'),
 ('GRF491', 'Graduation Thesis - Finance', '10', 'OJB202 2. Passed 80% of the programs total credits (not including VOV) 3. 5 Finance concentration courses and RMB301 or RMB302')
 
 
 
->>>>>>> ed5699da5d63e43d010b77adac4bfe1e56997098
 GO
 
 CREATE TABLE Major(
