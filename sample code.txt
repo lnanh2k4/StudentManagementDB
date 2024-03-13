@@ -9,3 +9,4 @@ git pull
 
 clone:
 git clone "url of repository"
+

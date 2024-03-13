@@ -1,5 +1,4 @@
-INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, CuID) VALUES  ('QE180208', 'Z', 'Dang Thi', '0', 'ZDTQE180208@fpt.edu.vn', 'FUQN', '3', 'BIT_IA_18D'),
-																							('HA180209', 'A', 'Vu Minh', '1', 'AVMHA180209@fpt.edu.vn', 'FUHN', '8', 'BJP_JP_18C'),
+INSERT INTO Student(StID, StFName, StLName, StSex, StEmail, CaID, StSemester, CuID) VALUES  ('HA180209', 'A', 'Vu Minh', '1', 'AVMHA180209@fpt.edu.vn', 'FUHN', '8', 'BJP_JP_18C'),
 																							('SA180210', 'B', 'Vu Minh', '1', 'BVMAS180210@fpt.edu.vn', 'FUHCM', '2', 'BKR_KR_18C'),
 																							('CE180211', 'C', 'Vu Minh', '1', 'CVMCE180211@fpt.edu.vn', 'FUCT', '1', 'BIT_IoT_18B'),
 																							('QS180212', 'D', 'Vu Minh', '1', 'DVMQS180212@fpt.edu.vn', 'FUQN', '8', 'BBA_TM_18C'),
